@@ -85,47 +85,53 @@ li:hover {
 }
 
 #cardItem {
-    background-color: white;
+    background-color: rgb(3, 40, 64);
     border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    width: 220px;
+    border-radius: 1rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0.5rem;
 }
 
-/* #cardItem:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-} */
-
-#cardItem h2 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #333;
-}
 
 #cardItem a {
     text-decoration: none;
-    color: #188faa;
+    color: #dbe555;
     display: block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-top: 10px;
     font-weight: 500;
     transition: color 0.2s;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 #cardItem a:hover {
-    color: #08157a;
+    color: #3bcd64;
 }
 
-#cardItem p {
-    margin: 5px 0;
-    word-break: break-word;
-    color: #2031e7;
-    font-style: italic;
+#cardItem img {
+    height: 15rem;
+    width: 15rem;
+    margin: 1.2rem;
+    border-radius: 1rem;
+}
+
+#cardItem:hover {
+    /* opacity: 0.6; */
+    transform: scale(1.03);
+}
+
+#cardItem a::after {
+    content: attr(href);
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    padding: 5px;
+    color: rgb(90, 99, 224);
+    font-size: 1rem;
+}
+
+#cardItem a:hover::after {
+    display: block;
 }

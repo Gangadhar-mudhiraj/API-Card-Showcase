@@ -82,7 +82,7 @@ function Container({ data }) {
             <div id='cardContainer'>
                 {info.length > 0 ? (
                     info.map((i, idx) => (
-                        <Card key={idx} card={i} />
+                        <Card key={idx} card={i} idx={idx} />
                     ))
                 ) : (
                     <p>No results found.</p>
